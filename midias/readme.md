@@ -1,4 +1,4 @@
-# 🎬 Mídias e Ativos Visuais — ctOS Framework
+# 🎬 Mídias e Ativos Visuais — Protocolo Holloway
 
 Esta pasta destina-se ao armazenamento de ficheiros de vídeo (`.mp4`) utilizados pelos módulos de simulação visual e infraestrutura ctOS (iluminação urbana, alarmes, simulação de eventos e feeds secundários de câmeras).
 
