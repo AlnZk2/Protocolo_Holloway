@@ -1,62 +1,31 @@
-# 💻 ctOS v2.0 - Protocolo Holloway
+# Protocolo Holloway
 
-Um protótipo iterativo e interativo inspirado no universo de *Watch Dogs*, projetado para simulações de invasão urbana, controle de câmeras, interceptação de chamadas/mensagens e manipulação de infraestrutura ctOS em tempo real.
-
----
-
-## 🚀 Funcionalidades Principais
-
-- **Vigilância por Câmera em Tempo Real (OpenCV & MediaPipe):**
-  - Detecção facial precisa com visualizador no estilo "visão noturna/hack".
-  - Status dinâmico: exibe **`IDENTIFICANDO...`** até que o perfil seja hackeado no menu do celular, atualizando para **`TARGET: AlnZk2 | Desenvolvedor`**.
-- **Interface Hacker Mobile (Tkinter & Threads):**
-  - **Identificação Profiler:** Coleta de dados do alvo (Nome, Ocupação, Telefone).
-  - **Vetores de Distração:** Pop-ups simulados de chamada telefônica, chat de SMS e injeção de e-mails SPAM.
-- **Controle de Infraestrutura Urbana:**
-  - Manipulação de semáforos, alarmes de veículos e rede de iluminação pública.
-- **Terminal de Laptop Avançado:**
-  - Minigame de alinhamento de frequência e bypass de firewall.
-  - Invasão de feeds de câmeras (Padrão e Circuito Fechado).
-  - Interceptação de nós de rede e antena urbana.
+Protótipo experimental desenvolvido em Python para testar a integração de bibliotecas de mídia, manipulação de janelas e periféricos do sistema. Inspirado na estética e nas mecânicas de invasão da franquia *Watch Dogs*, o projeto simula uma central de ferramentas "hacking" de monitoramento e intrusão capaz de capturar imagens da câmera, disparar efeitos sonoros e abrir janelas pop-up com vídeos automatizados.
 
 ---
 
-## 🛠️ Bibliotecas de Funcionalidade (Python)
+## Objetivo
 
-- **`opencv-python`**: Processamento de vídeo em tempo real e renderização do feed da câmera.
-- **`mediapipe`**: Detecção facial avançada via inteligência artificial.
-- **`numpy`**: Operações matriciais e geração de ruído térmico na imagem da webcam.
-- **`ffpyplayer`**: Reprodução de vídeos (`.mp4`) com sincronização de áudio para os módulos de mídia.
-- **`tkinter`**: Interface gráfica nativa (GUI) para os aplicativos simulados do smartphone e janelas pop-up.
+O foco deste repositório é o estudo prático do ecossistema Python fora do terminal convencional. O código foi estruturado como um laboratório para testar como diferentes módulos interagem com o hardware e o sistema operacional em tempo real:
 
----
-
-## 🐧 Guia de Instalação e Execução — LINUX (Ubuntu / Debian)
-
-### Opção A: Instalação Direta no Sistema
-Copie e cole o bloco abaixo no terminal para atualizar o sistema, instalar as dependências e executar o projeto:
-
-```sudo apt update && sudo apt install -y python3-pip python3-tk python3-opencv ffmpeg libsm6 libxext6 && pip3 install opencv-python mediapipe numpy ffpyplayer && python3 main.py```
-
-### Opção B: Instalação via Ambiente Virtual (VENV)
-Caso prefira rodar em um ambiente isolado:
-
-```sudo apt update && sudo apt install -y python3-pip python3-tk python3-venv python3-opencv ffmpeg libsm6 libxext6 && python3 -m venv venv && source venv/bin/activate && pip install opencv-python mediapipe numpy ffpyplayer && python3 main.py```
+* **Captura de Vídeo:** Acesso à webcam local e leitura de frames para simular feeds de câmeras de segurança (CFTV).
+* **Automação de Janelas (Pop-ups):** Criação dinâmica de múltiplas janelas na tela para reproduzir vídeos e alertas visuais simultâneos.
+* **Sincronização de Áudio:** Disparo de trilhas e efeitos sonoros em paralelo às ações da interface sem bloquear a execução do programa.
+* **Execução Concorrente:** Uso de threads para gerenciar vídeo, som e interface ao mesmo tempo.
 
 ---
 
-## 🪟 Guia de Instalação e Execução — WINDOWS
+## Tecnologias e Bibliotecas Utilizadas
 
-### Pré-requisitos
-- Ter o **Python 3.8 ou superior** instalado.
-- Certifique-se de ter marcado a opção **"Add Python to PATH"** na instalação do Python.
-
-### Instalação e Execução
-Abra o **Prompt de Comando (CMD)** ou **PowerShell** e execute:
-
-```pip install opencv-python mediapipe numpy ffpyplayer && python main.py```
+* **Python 3.13**
+* **OpenCV (`opencv-python`):** Captura da webcam e processamento básico de imagem/vídeo.
+* **Tkinter / Pygame:** Construção da interface, controle de eventos e abertura dos pop-ups de vídeo.
+* **Pygame Mixer / Playsound:** Reprodução assíncrona dos efeitos sonoros e alarmes.
+* **Bibliotecas Padrão (`threading`, `os`, `time`, `random`):** Controle de processos simultâneos, manipulação de caminhos e temporizadores.
 
 ---
 
-## 👤 Créditos
-Desenvolvido por **AlnZk2 | Desenvolvedor**.
+## AVISO LEGAL ⚠
+Este software é apenas uma simulação visual e sonora criada para fins de estudo de programação em Python. Nenhuma técnica real de invasão, exploração de vulnerabilidades ou acesso não autorizado a redes externas é realizada por este código.
+
+Todos os nomes, identificadores, sistemas (como referências ao ctOS ou Protocolo Holloway), dados exibidos na interface e cenários apresentados são puramente fictícios, inspirados em obras de ficção e jogos eletrônicos. Qualquer semelhança com sistemas, organizações ou pessoas reais é mera coincidência. O acesso à câmera e a exibição de janelas ocorrem estritamente de forma local na máquina do próprio usuário que executa o script.
